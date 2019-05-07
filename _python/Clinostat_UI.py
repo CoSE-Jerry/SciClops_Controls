@@ -913,7 +913,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
-        self.Expert_tab.setCurrentIndex(1)
+        self.Expert_tab.setCurrentIndex(0)
         self.frameMS_comboBox.setCurrentIndex(7)
         self.coreMS_comboBox.setCurrentIndex(7)
         self.Sensor_tabWidget.setCurrentIndex(0)
