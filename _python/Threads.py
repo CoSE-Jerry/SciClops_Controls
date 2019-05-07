@@ -63,7 +63,7 @@ class Cycle(QThread):
         on_stat = True
         
         while True:
-            for x in range(Settings.cycle_time):
+            for x in range(Settings.cycle_time*60):
                 sleep(1)
                 
                 if not Settings.cycle_running:
