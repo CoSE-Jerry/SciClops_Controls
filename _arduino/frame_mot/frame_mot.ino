@@ -150,10 +150,20 @@ void exeCMD() {
   }
   if (commands[0] == 4)
   {
-    stepper.enableDriver();
+    stepper.setCurrentMilliamps(currentLimit + commands[1]);
+    pulseWidth = commands[2];
+    wait = commands[3];
+    stepper.setStepMode(commands[4]);
   }
   if (commands[0] == 5)
   {
+    microStep = 128;
+    RPM = 3;
+    wait = 300;
+    currentLimit = 300;
+    dir = 0;
+    pulseWidth = 2;
     stepper.disableDriver();
+    sysRunning = false;
   }
 }

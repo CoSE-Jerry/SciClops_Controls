@@ -58,6 +58,7 @@ class Cycle(QThread):
             sleep(0.1)
         Settings.sendCMD(Settings.lighting_addr,"5~")
         if(Settings.IR_STAT):
+            sleep(0.1)
             Settings.sendCMD(Settings.lighting_addr,"3~")
         on_stat = True
         
@@ -81,6 +82,7 @@ class Cycle(QThread):
                     sleep(0.1)
                 Settings.sendCMD(Settings.lighting_addr,"5~")
                 if(Settings.IR_STAT):
+                    sleep(0.1)
                     Settings.sendCMD(Settings.lighting_addr,"3~")
                 on_stat = True
             if not Settings.cycle_running:

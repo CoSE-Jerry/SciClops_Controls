@@ -149,8 +149,10 @@ void exeCMD() {
   }
   if (commands[0] == 4)
   {
-    stepper.enableDriver();
-    sysRunning = true;
+    stepper.setCurrentMilliamps(currentLimit + commands[1]);
+    pulseWidth = commands[2];
+    wait = commands[3];
+    stepper.setStepMode(commands[4]);
   }
   if (commands[0] == 5)
   {
